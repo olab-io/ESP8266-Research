@@ -22,3 +22,8 @@ The above example illustrates the hidden network (1) that the pre-programmed ESP
 ![ESP8266 Mesh Network](media/defining_mesh_2.png)
 
 This example illustrates the visible network (2) and incorporates non-ESP8266 devices. Here a mobile phone can communicate with a laptop computer by routing their traffic through ESPs #1, #2, #3, and #5.
+
+## Mesh Network Resources
+- [How Mesh Networks Work (video)](https://www.youtube.com/watch?v=tYLU755T6_I)
+- [OLSR Protocol](https://en.wikipedia.org/wiki/Optimized_Link_State_Routing_Protocol)
+- [Batman Protocol](https://en.wikipedia.org/wiki/B.A.T.M.A.N.)
