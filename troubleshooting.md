@@ -1,6 +1,16 @@
 # Troubleshooting
 
-The ESP8266 can be a difficult device to work with. For that reason I have created a few notes explaining common issues I have had while working with them. Other refererences that may be more helpful than this document is the [ESP8266 community forum](http://esp8266.com) and the [ESP8266 Arduino Issues](https://github.com/esp8266/Arduino/issues) page. When developing with the ESP8266 chip it is often a good idea to have multiple chips in case one fails. 
+The ESP8266 can be a difficult device to work with. For that reason I have created a few notes explaining common issues I have had while working with them. Other refererences that may be more helpful than this document is the [ESP8266 community forum](http://esp8266.com) and the [ESP8266 Arduino Issues](https://github.com/esp8266/Arduino/issues) page. When developing with the ESP8266 chip it is often a good idea to have multiple chips in case one fails.
+
+## Power Issues
+
+I've found that lots of unexpected problems arise when the ESP8266 doesn't receive enough power. Whenever something is behaving strangely, make sure that your power supply is capable of providing:
+
+- 3.3v DC voltage
+- 250mA current (Flashing firmware/code may require as much as 350mA)
+
+I've found that only a few uploads will cause a significant draw of power and render some batteries almost useless. My AAA 1.5v batteries (which I measured to actually output 1.66v) dropped to 1.40v in only about 15min of usage powering an ESP that I was constantly uploading to. In this case two 1.40v batteries could not proved the 3.3v needed to power the chip and the batteries had to be replaced.
+
 ## `warning: espcomm_sync failed` or `error: espcomm_open failed` (Arduino)
 
 Your Arduino IDE can't establish a connection with you ESP device. This is quite normal and often occurs even if your setup is correct. Try cycling the power (turn the ESP8266 off by disconnecting GND or VCC) and then uploading again. I've regularly had to do this 3-4 times per upload (ugh). If that doesn't seem to work make sure that:

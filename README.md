@@ -28,8 +28,6 @@ Getting up and running with the ESP8266 SoC.
 - [ESP8266 Wiki](https://github.com/esp8266/esp8266-wiki/wiki)
 - [ESP8266 GitHub](https://github.com/esp8266) (Community forum GitHub account)
 
-
-
 ## Projects, Examples, and Proofs of Concept
 
 - [ESP8266 Webserver](https://github.com/esp8266/esp8266-webserver)
